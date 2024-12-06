@@ -26,7 +26,6 @@ public class FlinkCrawler {
         // 创建 Kafka
         Properties kafkaProps = new Properties();
         kafkaProps.put("bootstrap.servers", "localhost:9092");  // Kafka broker addresses
-        kafkaProps.put("acks", "all");                          // Ensure data is fully acknowledged
         kafkaProps.put("retries", 3);                            // Set retries in case of failures
         kafkaProps.put("linger.ms", 5);                          // Time to wait before sending messages
         kafkaProps.put("batch.size", 16384);
